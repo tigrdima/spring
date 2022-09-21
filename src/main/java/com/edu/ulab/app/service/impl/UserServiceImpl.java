@@ -24,21 +24,25 @@ public class UserServiceImpl implements UserService {
         long id = new Random().nextLong();
         userDto.setId(Math.abs(id));
         userStorage.createUser(userDto);
+        log.info("Create userDto: {}", userDto);
         return userDto;
     }
 
     @Override
     public Optional<UserDto> updateUser(UserDto userDto) {
+        log.info("Update userDto: {}", userDto);
         return userStorage.updateUser(userDto);
     }
 
     @Override
     public Optional<UserDto> getUserById(Long id) {
+        log.info("Get userDto: {}", userStorage.getUserById(id));
         return userStorage.getUserById(id);
     }
 
     @Override
     public void deleteUserById(Long id) {
+        log.info("Delete userDto by ID: {}", id);
         userStorage.deleteUserById(id);
     }
 }
