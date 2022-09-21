@@ -1,10 +1,10 @@
-package com.edu.ulab.app.service;
+package com.edu.ulab.app.storage;
 
 import com.edu.ulab.app.dto.UserDto;
 
 import java.util.Optional;
 
-public interface UserService {
+public interface UserStorage {
     UserDto createUser(UserDto userDto);
 
     Optional<UserDto> updateUser(UserDto userDto);

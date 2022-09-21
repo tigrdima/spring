@@ -1,11 +1,10 @@
-package com.edu.ulab.app.service;
-
+package com.edu.ulab.app.storage;
 
 import com.edu.ulab.app.dto.BookDto;
 
 import java.util.List;
 
-public interface BookService {
+public interface BookStorage {
     BookDto createBook(BookDto bookDto);
 
     BookDto updateBook(BookDto bookDto);
